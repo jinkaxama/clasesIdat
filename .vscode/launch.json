@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientapiApplication<clientapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "pe.idat.dsi.dcn.clientapi.ClientapiApplication",
+            "projectName": "clientapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
