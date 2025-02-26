@@ -1,5 +1,8 @@
 package pe.idat.dsi.dcn.clientapi.models;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*; // importamos la anotación @Entity de JPA para que la clase sea una entidad
 import lombok.AllArgsConstructor; // importamos la anotación @AllArgsConstructor de Lombok para que genere un constructor con todos los atributos de la clase
@@ -26,4 +29,7 @@ public class Client {
     @Column(name = "email", length = 200, nullable = false)
     private String email;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "client")
+    private List<Address> addresses;
 }
